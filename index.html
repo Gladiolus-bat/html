@@ -3,10 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watch Store - Home</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Watch Store – Home</title>
+    <link rel="stylesheet" href="css/styles.css"><!-- (Keep if you have an external sheet) -->
+    <style>
+        /* ---------- GLOBAL LAYOUT ---------- */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            /* 🔷 background now fixed to a soft white‑gray */
+            background: #fafafa;                         /* ← changed */
+            color: #222;
+        }
+
+        /* ---------- NAV ---------- */
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,.05);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            gap: 1rem;
+            justify-content: center;
+        }
+        nav a {
+            display: block;
+            padding: 1rem 1.25rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+        nav a:hover {
+            color: #f44336;
+        }
+
+        /* ---------- HERO ---------- */
+        header {
+            /* 🔷 removed photo background so white/gray persists */
+            background: linear-gradient(180deg, #fff 0%, #f1f1f1 100%); /* subtle gray fade */ /* ← changed */
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+        header h1 { font-size: 3rem; margin: 0 0 .5rem; }
+        header p  { font-size: 1.25rem; margin: 0 0 2rem; }
+
+        .cta {
+            background: #f44336;
+            color: #fff;
+            padding: .75rem 1.75rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background .3s;
+        }
+        .cta:hover { background: #d32f2f; }
+
+        /* ---------- SECTIONS ---------- */
+        .section {
+            padding: 3rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* ---------- PRODUCTS ---------- */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .product-card {
+            background: #fff;
+            padding: 1.25rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,.07);
+            text-align: center;
+            width: 280px;
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: .75rem;
+        }
+
+        /* ---------- TESTIMONIALS ---------- */
+        .testimonial-box {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,.05);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .testimonial-box p { font-style: italic; color: #555; }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            background: #fff;
+            text-align: center;
+            padding: 2rem 1rem;
+            border-top: 1px solid #e5e5e5;
+        }
+    </style>
 </head>
 <body>
+    <!-- ========= NAV ========= -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -16,18 +120,74 @@
         </ul>
     </nav>
 
+    <!-- ========= HERO ========= -->
     <header>
-        <h1>Welcome to Watch Store</h1>
+        <h1>Welcome to Watch Store</h1>
         <p>Your destination for stylish timepieces.</p>
+        <a href="#" class="cta">Shop Now</a>
     </header>
 
-    <footer>
+    <!-- ========= FEATURES (NEW) ========= -->
+    <section class="section" id="features"><!-- NEW section to lengthen page -->
+        <h2 style="text-align:center;margin-bottom:2rem;">Why Choose Us</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;">
+            <div style="background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.06);">
+                <h3>Swiss Movements</h3>
+                <p>Sourcing premium mechanisms for unsurpassed precision.</p>
+            </div>
+            <div style="background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.06);">
+                <h3>2‑Year Warranty</h3>
+                <p>Full coverage on parts & workmanship, no questions asked.</p>
+            </div>
+            <div style="background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.06);">
+                <h3>Free Sizing</h3>
+                <p>Complimentary bracelet/strap adjustments with every order.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= PRODUCT CARDS ========= -->
+    <section class="section" id="products">
+        <h2 style="text-align:center;margin-bottom:2rem;">Featured Watches</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="images/watch1.jpg" alt="Classic Chronograph">
+                <h3>Classic Chronograph</h3>
+                <p>$199.99</p>
+                <a href="#" class="cta">View Details</a>
+            </div>
+            <div class="product-card">
+                <img src="images/watch2.jpg" alt="Elegant Dress Watch">
+                <h3>Elegant Dress Watch</h3>
+                <p>$149.99</p>
+                <a href="#" class="cta">View Details</a>
+            </div>
+            <div class="product-card">
+                <img src="images/watch3.jpg" alt="Sports Waterproof Watch">
+                <h3>Sports Waterproof Watch</h3>
+                <p>$129.99</p>
+                <a href="#" class="cta">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= TESTIMONIALS ========= -->
+    <section class="section" id="testimonials">
+        <h2 style="text-align:center;margin-bottom:2rem;">Customer Testimonials</h2>
+        <div class="testimonial-box">
+            <p>“I love the quality and style of watches from Watch Store. Highly recommended!”</p>
+            <p>“The customer service is exceptional – they helped me find the perfect gift!”</p>
+        </div>
+    </section>
+
+    <!-- ========= SPACER (NEW) ========= -->
+    <section class="section" style="height:200px;"><!-- empty spacer adds length -->
+        <!-- Intentionally left blank to extend scroll length -->
+    </section>
+
+    <!-- ========= FOOTER ========= -->
+    <footer style="background-color: #222;">
         <p>&copy; 2025 Watch Store. All rights reserved.</p>
     </footer>
 </body>
 </html>
-
-
-
-
-

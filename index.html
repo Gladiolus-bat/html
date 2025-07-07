@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watch Store – Home</title>
-    <link rel="stylesheet" href="css/styles.css"><!-- (Keep if you have an external sheet) -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watch Store – Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+    }
+  </style><!-- (Keep if you have an external sheet) -->
     <style>
         /* ---------- GLOBAL LAYOUT ---------- */
         body {
@@ -109,23 +117,34 @@
         }
     </style>
 </head>
-<body>
-    <!-- ========= NAV ========= -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+<body class="bg-gray-50 text-gray-800">
 
-    <!-- ========= HERO ========= -->
-    <header>
-        <h1>Welcome to Watch Store</h1>
-        <p>Your destination for stylish timepieces.</p>
-        <a href="#" class="cta">Shop Now</a>
-    </header>
+  <!-- Navbar -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <div class="flex items-center">
+          <img src="https://img.icons8.com/ios-filled/50/000000/watch.png" class="w-8 h-8 mr-2" alt="logo" />
+          <span class="text-2xl font-bold text-gray-900">Watch Store</span>
+        </div>
+        <ul class="flex space-x-6 text-lg font-medium">
+          <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+          <li><a href="products.html" class="hover:text-blue-600">Products</a></li>
+          <li><a href="about.html" class="hover:text-blue-600">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-cover bg-center h-[500px] flex items-center justify-center text-center" style="background-image: url('https://images.unsplash.com/photo-1513185158878-8f7f6c37d631?auto=format&fit=crop&w=1950&q=80');">
+    <div class="bg-black bg-opacity-60 p-10 rounded-lg">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4">Elevate Your Style</h1>
+      <p class="text-xl text-gray-300 mb-6">Discover timeless elegance with our curated collection of watches.</p>
+      <a href="products.html" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">Shop Now</a>
+    </div>
+  </header>
 
     <p>This is so random.</p>
 

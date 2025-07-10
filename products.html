@@ -1,4 +1,3 @@
-<!-- products.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,34 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watch Store - Products</title>
     <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Explore our collection of classic and sports watches for every style.">
+    <meta name="author" content="Watch Store">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <header>
-        <h1>Our Products</h1>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo" aria-label="Watch Store Home">
+                <!-- Replace src with your logo -->
+                <img src="images/logo.png" alt="Watch Store Logo" class="logo__img">
+            </a>
+            <nav class="nav" aria-label="Main Navigation">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="products.html" class="nav__link nav__link--active">Products</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About Us</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <div class="product">
-            <h2>Classic Watch</h2>
-            <p>Elegant and timeless design.</p>
-        </div>
-        <div class="product">
-            <h2>Sports Watch</h2>
-            <p>Durable and functional for active lifestyles.</p>
-        </div>
+    <main class="main-content">
+        <section class="products">
+            <div class="container">
+                <h1 class="section-title">Our Products</h1>
+
+                <div class="product-list">
+                    <article class="product-card">
+                        <img src="images/classic-watch.jpg" alt="Classic Watch" class="product-card__img">
+                        <h2 class="product-card__title">Classic Watch</h2>
+                        <p class="product-card__description">Elegant and timeless design for formal occasions.</p>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="images/sports-watch.jpg" alt="Sports Watch" class="product-card__img">
+                        <h2 class="product-card__title">Sports Watch</h2>
+                        <p class="product-card__description">Durable and functional for active lifestyles.</p>
+                    </article>
+
+                    <!-- More product cards can be added here -->
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Watch Store. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container footer__container">
+            <p>&copy; 2025 Watch Store. All rights reserved.</p>
+            <ul class="footer__links">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>
